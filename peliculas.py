@@ -1,3 +1,6 @@
+from arbinor2 import node
+from arbinor2 import arbol
+
 class Cola:
     def __init__(self):
         self.items=[]
@@ -11,12 +14,7 @@ class Cola:
     def es_vacia(self):
         return self.items == []
     def recorrer
-class nodo():
-    def __init__(self, val, izq=None, der=None):
-        self.valor = val
-        self.izq = izq
-        self.der = der
-class arbolBinario:
+
     def __init__(self):
         # inicializa la raiz
         self.raiz = None
@@ -47,18 +45,21 @@ class Genero:
     nombre=0
     peliculas = Cola()
 
-    def agregarPelicula(pelicula):
+    def agregarPelicula(self,pelicula):
         if pelicula.genero==self.nombre:
             peliculas.encolar(pelicula)
         else:
             print ("La pelicula no corresponde a ese genero")
         
 class Organizar:
-    generos = arbolBinario()
+    arbolGeneros = arbol()
 
     def agregarGenero(genero):
-        generos.
+        arbolGeneros.insert()
     
+class GestionAgregar:
+    def _agregarGenero_():
+        
 def main():
     gaccion = Genero()
     gaccion.nombre="Accion"

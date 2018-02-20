@@ -94,7 +94,7 @@ class ArbolBinarioBusqueda:
        else:
            return self._obtener(clave,nodoActual.hijoDerecho)
 
-    def __getitem__(self,clave):
+    def __getitem__(self,clave): #Metodo de busqueda
        return self.obtener(clave)
 
     def __contains__(self,clave):
@@ -203,6 +203,8 @@ miArbol[3]="rojo"
 miArbol[4]="azul"
 miArbol[6]="amarillo"
 miArbol[2]="en"
+
+miArbol.__getitem__("en").
 
 print(miArbol[6])
 print(miArbol[2])
