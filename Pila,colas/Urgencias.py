@@ -34,11 +34,9 @@ if __name__ == "__main__":
     cardiacos.encolar("Juan")
     respiratorias.encolar("Maria")
     respiratorias.encolar("Laura")
-    musculares.encolar("Perez")
-    musculares.encolar("Brian")
     menu=0
     while(menu<3):
-        print "Bienvenido al sistema de urgencias \n"
+        print "\n\t\tBienvenido al sistema de urgencias \n"
         print "1. Ingresar urgencia"
         print "2. Atender pacientes"
         print "0. salir del sistema"
@@ -64,12 +62,35 @@ if __name__ == "__main__":
                         nombre = input()
                         musculares.encolar(nombre)
         if(menu==2):
+            print "\t\t\tPACIENTES POR ATENDER\n\n"
+            print "Pacientes con problemas cardiacos: "
             print cardiacos.items
+            print "Pacientes con problemas respiratorios: "
             print respiratorias.items
+            print "Pacientes con problemas musculares: "
             print musculares.items
+            print "\n"
             prioridades = Cola()
             prioridades.encolar(cardiacos)
             prioridades.encolar(respiratorias)
             prioridades.encolar(musculares)
-            print "Atendiendo pacientes con problemas cardiacos"
+            print "Atendiendo pacientes con problemas cardiacos... \n"
             tanda1=prioridades.desencolar()
+            while (tanda1.es_vacia()==False):
+                print "Atendiendo al paciente "+tanda1.desencolar()
+                if(tanda1.es_vacia() == True):
+                    print "\nSE HAN ATENDIDO TODOS LOS PACIENTES CON PROBLEMAS CARDIACOS DE MANERA SATISFACTORIA \n\n"
+
+            print "Atendiendo pacientes con problemas respiratorios... \n"
+            tanda2 = prioridades.desencolar()
+            while (tanda2.es_vacia() == False):
+                print "Atendiendo al paciente " + tanda2.desencolar()
+                if (tanda2.es_vacia() == True):
+                    print "\nSE HAN ATENDIDO TODOS LOS PACIENTES CON PROBLEMAS RESPIRATORIOS DE MANERA SATISFACTORIA \n\n"
+
+            print "Atendiendo pacientes con problemas musculatorios... \n"
+            tanda2 = prioridades.desencolar()
+            while (tanda2.es_vacia() == False):
+                print "Atendiendo al paciente " + tanda2.desencolar()
+                if (tanda2.es_vacia() == True):
+                    print "\nSE HAN ATENDIDO TODOS LOS PACIENTES CON PROBLEMAS MUSCULARES DE MANERA SATISFACTORIA \n\n"
