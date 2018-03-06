@@ -22,6 +22,8 @@ def verificarOperadores(cadena):
 def verificarSintaxis(cadena):
     datos=cadena.split(" ")
     obj=Pila()
+    for dato in datos:
+        if dato == "+" or dato == "-" or dato == "*" or dato == "/":
     
 def lecturaDatos(nombre):
     operaciones = Pila()
