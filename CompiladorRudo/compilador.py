@@ -73,9 +73,12 @@ def verificarSintaxis(cadena):
     datos=cadena.split(" ")
     obj=Pila()
     for dato in datos:
-        if dato == "+" or dato == "-" or dato == "*" or dato == "/":
+        if dato == "+" or dato == "-" or dato == "*" or dato == "/":            
             num1 = obj.desapilar()
             num2 = obj.desapilar()
+            if dato == "/":
+                if num2==0:
+                    return 0
             try:
                 resultado = obj.operacion(dato, num1, num2)
             except ValueError:
