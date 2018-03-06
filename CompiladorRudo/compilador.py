@@ -19,4 +19,18 @@ def verificarOperadores(cadena):
             print("todo ultra")
             return 1
 
-print("operador",verificarOperadores("5 7 + 7 8 + 1 4 /"))
+def verificarSintaxis(cadena):
+    datos=cadena.split(" ")
+    obj=Pila()
+    
+def lecturaDatos(nombre):
+    operaciones = Pila()
+    archivo = open(nombre,"r")
+    for linea in archivo.readlines():
+        print linea
+        operaciones.apilar(linea)
+    archivo.close()
+
+
+lecturaDatos("verificar.txt")
+#print("operador",verificarOperadores("5 7 + 7 8 + 1 4 /"))
